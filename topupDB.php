@@ -2,18 +2,18 @@
     // เชื่อมต่อกับฐานข้อมูล
     session_start(); // เริ่มการทำงานของ session
     $host = 'junction.proxy.rlwy.net';
-$port = '13506';
-$dbname = 'railway';
-$username = 'root';
-$password = 'YvHGSjIeEzwZcJbdstAFfEhaWGViYLdb';
-
-try {
-    $pdo = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully";
-} catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
+    $port = '35549';
+    $dbname = 'railway';
+    $username = 'root';
+    $password = 'JULUkkKytfpHJTdqjOVRMnSyxiPpiyAJ';
+    
+    try {
+        $pdo = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        echo "Connected successfully";
+    } catch (PDOException $e) {
+        echo "Connection failed: " . $e->getMessage();
+    }
 
 
     // ตรวจสอบว่ามีการส่งข้อมูลผ่าน POST หรือไม่

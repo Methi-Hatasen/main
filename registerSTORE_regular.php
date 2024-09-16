@@ -3,16 +3,27 @@
 
     if(!isset($_SESSION['email'])){
         $_SESSION['msg'] = "You must log in first";
-        header('location: login.php');
+        header('location: login_regular.php');
     }
     if(isset($_GET['logout'])){
         session_destroy();
         unset($_SESSION['email']);
-        header('location: login.php');
+        header('location: login_regular.php');
     }
 
-    // เชื่อมต่อกับฐานข้อมูล
-    $con = mysqli_connect("localhost", "root", "", "projectsmartcard");
+    $host = 'junction.proxy.rlwy.net';
+$port = '35549';
+$dbname = 'railway';
+$username = 'root';
+$password = 'JULUkkKytfpHJTdqjOVRMnSyxiPpiyAJ';
+
+try {
+    $pdo = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connected successfully";
+} catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
 
     // ดึงข้อมูลจากฐานข้อมูล
     $sql = "SELECT * FROM store";

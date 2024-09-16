@@ -1,9 +1,9 @@
 <?php
 $host = 'junction.proxy.rlwy.net';
-$port = '13506';
+$port = '35549';
 $dbname = 'railway';
 $username = 'root';
-$password = 'YvHGSjIeEzwZcJbdstAFfEhaWGViYLdb';
+$password = 'JULUkkKytfpHJTdqjOVRMnSyxiPpiyAJ';
 
 try {
     $pdo = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password);

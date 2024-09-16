@@ -3,10 +3,10 @@
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 $host = 'junction.proxy.rlwy.net';
-$port = '13506';
+$port = '35549';
 $dbname = 'railway';
 $username = 'root';
-$password = 'YvHGSjIeEzwZcJbdstAFfEhaWGViYLdb';
+$password = 'JULUkkKytfpHJTdqjOVRMnSyxiPpiyAJ';
 
 try {
     $pdo = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password);
